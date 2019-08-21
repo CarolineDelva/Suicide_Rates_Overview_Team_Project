@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
-	<link rel="stylesheet" href="websitestyle.css">
-
+	<link rel="stylesheet" href="cloudiness.css">
+	<title>Max. Temperature</title>
 </head>
 
 <body>
@@ -26,16 +26,14 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown">
-					
-					
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Plots
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="Humidity.html">Humidity</a>
 						<a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
-						<a class="dropdown-item" href="WindSpeed.html">Wind Speed</a>
+						<a class="dropdown-item" href="Humidity.html">Humidity</a>
+						<a class="dropdown-item" href="WindSpeed.html">WindSpeed</a>
 						<a class="dropdown-item" href="MaxTemperature.html">Max Temperature</a>
 						
 					</div>
@@ -55,28 +53,22 @@
 	<div class="row">
 		<div class="leftDiv">
 			<div>
-				<h2> Summary: Latitude vs X.</h2>
+				<h2> Vs. Max Temperature.</h2>
 			</div>
 			<hr>
 			<div class="imgWrapper">
 				<article>
 					<a target="_blank" href="MaxTemperature.html">
-						<img src="./Resources/assets/images/Fig1.png" alt="Latitude vs Max Temp" class="img-fluid"
-							>
+						<img src="./Resources/assets/images/Fig1.png" alt="Latitude vs Max Temp" class="img-fluid">
 					</a>
-					<p>
-						<em>The purpose of this project was to analyze how weather changes as you get closer to ther
-							equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to
-							assemble a dataset on over 500 cities.
-							<br>
-							<br>
-							After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
-							latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humnidity.
-							This site provides the source data and visualizations created as part of the analysis, as
-							well as explanations and descriptions of any trends and correlations witnessed.
-						</em>
-					</p>
 				</article>
+			</div>
+			<div>
+				<p>
+					<em>As seen from the graph, the temperature increases as we approche the equator and decreases as we move away from the equator.
+						
+					</em>
+				</p>
 			</div>
 		</div>
 
