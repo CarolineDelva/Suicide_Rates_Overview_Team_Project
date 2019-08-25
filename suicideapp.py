@@ -104,14 +104,21 @@ def countrycoordinates():
 
 
 @app.route('/suicidedatabycontinent')
-def suicide_by_continent():
+def suicide_by_continent():    
+    POSTGRES = {
+        'user': 'postgres',
+        'pw': api_key,
+        'db': 'suicide_rates_overview_db',
+        'host': 'localhost',
+        'port': '5432',
+    }
 
-
-    df_suicide_rates_df = pd.read_csv("Data/Suicide_Rates_Data.csv")
-    df_suicide_rates_df.head() 
+    engine = create_engine('postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s'% POSTGRES)
+    df_suicide_rates_df = pd.read_sql('select * from suicides_rates_db', engine)
+    df_suicide_rates_df
 
     countries_coordinates = requests.get("http://techslides.com/demos/country-capitals.json")
-    
+
 
     countries_df = pd.read_json(json.dumps(countries_coordinates.json()), orient= 'list')
 
@@ -136,12 +143,23 @@ def suicide_by_continent():
 
 @app.route('/suicidedatabycountry')
 def suicide_by_country():
+        
+    POSTGRES = {
+        'user': 'postgres',
+        'pw': api_key,
+        'db': 'suicide_rates_overview_db',
+        'host': 'localhost',
+        'port': '5432',
+    }
 
-    df_suicide_rates_df = pd.read_csv("Data/Suicide_Rates_Data.csv")
-    df_suicide_rates_df.head() 
+
+
+    engine = create_engine('postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s'% POSTGRES)
+    df_suicide_rates_df = pd.read_sql('select * from suicides_rates_db', engine)
+    df_suicide_rates_df
 
     countries_coordinates = requests.get("http://techslides.com/demos/country-capitals.json")
-    
+
 
     countries_df = pd.read_json(json.dumps(countries_coordinates.json()), orient= 'list')
 
@@ -157,6 +175,8 @@ def suicide_by_country():
     combined_data['CapitalLatitude'] = pd.to_numeric(combined_data['CapitalLatitude'], errors='coerce')
     combined_data['CapitalLongitude'] = pd.to_numeric(combined_data['CapitalLongitude'], errors='coerce')
     combined_data = combined_data.dropna()
+
+    
 
     combined_data_by_country = combined_data.groupby(['country', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
     suicide_by_country = combined_data_by_country.to_json()
