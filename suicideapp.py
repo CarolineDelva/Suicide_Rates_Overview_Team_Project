@@ -16,7 +16,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 import requests 
 import json
-
 from config import api_key
 from config import google_api_key
 
@@ -52,7 +51,7 @@ print(dir(Base.classes))
 
 @app.route("/")
 def main():
-    return render_template("gender.html")
+    return render_template("index.html")
 
 
 @app.route("/suicideratesdata")
@@ -104,34 +103,69 @@ def countrycoordinates():
     return jsonify({"coord": countries_coordinates.json()})
 
 
-
-       
-
-@app.route('/joined_data')
-def joined_data_by_country():
-    return jsonify
+@app.route('/suicidedatabycontinent')
+def suicide_by_continent():
 
 
-@app.route('/joined_data')
-def joined_data_by_country(info2):
-   google_api_stmt = db.session.query(google_api_class).statement
-    google_api_df = pd.read_sql_query(google_api_stmt, db.session.bind)
+    df_suicide_rates_df = pd.read_csv("Data/Suicide_Rates_Data.csv")
+    df_suicide_rates_df.head() 
 
-    suicide_data_stmt = db.session.query(suicide_data_class).statement
-    suicide_data_df = pd.read_sql_query(suicide_data_stmt, db.session.bind)
-
-    df_suicide_rates_by_country = df_suicide_df[['country', 'sex','suicides_no']].groupby("country").agg({"suicides_no" : "mean"})
-    df_suicide_rates_by_country = pd.merge(google_api_df, suicide_data_df, how=outer, left_index=True, right_index=True)
+    countries_coordinates = requests.get("http://techslides.com/demos/country-capitals.json")
     
-    joined_data_df = suicide_data_df.groupby([]) 
 
-    joined_data = {
-        "country": joined_data_df.country.values.tolist(),
-        "sex" : joined_data_df.sex.values.tolist(),
-        "suicides_no" : joined_data_df.suicides_no.tolist(),           
+    countries_df = pd.read_json(json.dumps(countries_coordinates.json()), orient= 'list')
 
-     }
-    return jsonify(joined_data)
+    combined_data =df_suicide_rates_df.merge(countries_df, left_on ="country", right_on='CountryName')
+
+
+    combined_data = combined_data[['country', 'sex', 'suicides_no', 'CapitalLatitude', 'CapitalLongitude', 'ContinentName']]
+    combined_data.head()
+
+    combined_data.to_json()
+
+    combined_data['suicides_no'] = pd.to_numeric(combined_data['suicides_no'], errors='coerce')
+    combined_data['CapitalLatitude'] = pd.to_numeric(combined_data['CapitalLatitude'], errors='coerce')
+    combined_data['CapitalLongitude'] = pd.to_numeric(combined_data['CapitalLongitude'], errors='coerce')
+    combined_data = combined_data.dropna()
+
+    combined_data_by_continent = combined_data.groupby(['ContinentName', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
+    suicide_by_continent = combined_data_by_continent.to_json()
+
+    return suicide_by_continent
+
+
+@app.route('/suicidedatabycountry')
+def suicide_by_country():
+
+    df_suicide_rates_df = pd.read_csv("Data/Suicide_Rates_Data.csv")
+    df_suicide_rates_df.head() 
+
+    countries_coordinates = requests.get("http://techslides.com/demos/country-capitals.json")
+    
+
+    countries_df = pd.read_json(json.dumps(countries_coordinates.json()), orient= 'list')
+
+    combined_data =df_suicide_rates_df.merge(countries_df, left_on ="country", right_on='CountryName')
+
+
+    combined_data = combined_data[['country', 'sex', 'suicides_no', 'CapitalLatitude', 'CapitalLongitude', 'ContinentName']]
+    combined_data.head()
+
+    combined_data.to_json()
+
+    combined_data['suicides_no'] = pd.to_numeric(combined_data['suicides_no'], errors='coerce')
+    combined_data['CapitalLatitude'] = pd.to_numeric(combined_data['CapitalLatitude'], errors='coerce')
+    combined_data['CapitalLongitude'] = pd.to_numeric(combined_data['CapitalLongitude'], errors='coerce')
+    combined_data = combined_data.dropna()
+
+    combined_data_by_country = combined_data.groupby(['country', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
+    suicide_by_country = combined_data_by_country.to_json()
+    return  suicide_by_country
+      
+
+
+
+
 
 if __name__ == '__main__':
     app.run()
