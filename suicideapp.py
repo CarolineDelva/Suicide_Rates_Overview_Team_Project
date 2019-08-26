@@ -104,18 +104,11 @@ def countrycoordinates():
 
 
 @app.route('/suicidedatabycontinent')
-def suicide_by_continent():    
-    POSTGRES = {
-        'user': 'postgres',
-        'pw': api_key,
-        'db': 'suicide_rates_overview_db',
-        'host': 'localhost',
-        'port': '5432',
-    }
+def suicide_by_continent():  
 
-    engine = create_engine('postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s'% POSTGRES)
-    df_suicide_rates_df = pd.read_sql('select * from suicides_rates_db', engine)
-    df_suicide_rates_df
+
+    df_suicide_rates_df = pd.read_csv("Data/Suicide_Rates_Data.csv")
+    df_suicide_rates_df.head() 
 
     countries_coordinates = requests.get("http://techslides.com/demos/country-capitals.json")
 
@@ -136,7 +129,11 @@ def suicide_by_continent():
     combined_data = combined_data.dropna()
 
     combined_data_by_continent = combined_data.groupby(['ContinentName', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
-    suicide_by_continent = combined_data_by_continent.to_json()
+    combined_data_by_continent = combined_data_by_continent.sort_values(by=['suicides_no'])
+
+
+    combined_data_by_continent = combined_data.groupby(['ContinentName', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
+    suicide_by_continent = combined_data_by_continent.to_json(orient='records')
 
     return suicide_by_continent
 
@@ -151,9 +148,6 @@ def suicide_by_country():
         'host': 'localhost',
         'port': '5432',
     }
-
-
-
     engine = create_engine('postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s'% POSTGRES)
     df_suicide_rates_df = pd.read_sql('select * from suicides_rates_db', engine)
     df_suicide_rates_df
@@ -179,8 +173,9 @@ def suicide_by_country():
     
 
     combined_data_by_country = combined_data.groupby(['country', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
-    suicide_by_country = combined_data_by_country.to_json()
-    return  suicide_by_country
+    combined_data_by_country = combined_data_by_country.sort_values(by=['suicides_no'])
+    suicide_by_country = combined_data_by_country.to_json(orient='records')
+    return suicide_by_country
       
 
 
