@@ -19,13 +19,14 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
-	<link rel="stylesheet" href="/static/css/websitestyle.css">
+    <link rel="stylesheet" href="/static/css/websitestyle.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 		<nav class="navbar navbar-expand-lg navbar-white bg-white">
-			<a class="navbar-brand" href="#">Lattitude</a>
+			<a class="navbar-brand" style="text-decoration:none; color:#FFFFFF; href="#">Suicide Rates Exploratory Analysis Over Three Decades</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -39,18 +40,26 @@
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Plots
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="Humidity.html">Humidity</a>
-							<a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
-							<a class="dropdown-item" href="WindSpeed.html">Wind Speed</a>
-							<a class="dropdown-item" href="MaxTemperature.html">Max Temperature</a>
+                        </a>
+                        <div class="wrap">
+                                <!-- <div class="search">
+                                   <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                                   <button type="submit" class="searchButton">
+                                     <i class="fa fa-search"></i>
+                                  </button>
+                                </div>
+                             </div> -->
+					    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="generation_landing.html">Generation</a>
+							<a class="dropdown-item" href="gender.html">Gender</a>
+							<a class="dropdown-item" href="country.html">Country</a>
+							<a class="dropdown-item" href="GDP.html">GDP</a>
 							
 						</div>
 					</li>
-					<li class="nav-item active">
+					<!-- <li class="nav-item active">
 						<a class="nav-link" href="Comparison_Page.html">Comparison <span class="sr-only">(current)</span></a>
-					</li>
+					</li> -->
 					<li class="nav-item">
 						<a class="nav-link" href="data.html">Data</a>
 					</li>
@@ -63,26 +72,45 @@
 		<div class="row">
 			<div class="leftDiv">
 				<div>
-					<h2> Summary: Latitude vs X.</h2>
+					<h2> Summary: Suicide Rate Frequency Through Generation, Gender, Country, and Gross Domestic Product(GDP).</h2> 
+					
+					<img src="/static/css/Hope.jpg" alt="Hope Written in Palm" style="width:500px;height:350px;">
 				</div>
 				<hr>
 				<div class="imgWrapper">
 
-					<div id="gender">
+					<div id="firstpage">
 
 					</div>
 					<article>
 
 						<p>
-							<em>The purpose of this project was to analyze how weather changes as you get closer to ther
-								equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to
-								assemble a dataset on over 500 cities.
+							<em> 
+                                <br>
+                                Purpose:
+                                <br>
+                                <p>Suicide Rates have increased immensely for the past 30 to 45 years regardless of an influx of prevention methods. There is a major 
+                                variability both geographically as well as with age and gender, in suicide rates. Most research has not clearly defined why there is so much variability 
+                                within those three categories; however, the purpose of this study is to perform an exploratory analysis using D3.js visualization to visually
+                                depict the frequency of suicide rates over 30 years (1985-2016) to extract data and provide some potential answers to pondering questions from past research. 
+                                </p>
+                                <br>
+                                Methods:
+                                <br>
+                                <p>Data was extracted from "Suicide Rates Overview" in Kaggle ('https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016'). Data was
+                                cleaned through Pandas Jupyter Notebook. We dropped columns and numbers that were not pertinent to our research (i.e.,'HDI Rate' and zeros). Moving Forward, we
+                                created a database through SQL/PgAdmin4 where we formed tables that represented our new columns. Once we had our database, we created a html file that aggregated all of
+                                our individual apps for gender, generation, country, and GDP. Lastly we created our own individual Javascript and HTML Landing Pages for our website, then linked our SQL database and html pages to Flask for deployment. 
+                                </p>
+
 								<br>
-								<br>
-								After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
-								latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humnidity.
-								This site provides the source data and visualizations created as part of the analysis, as
-								well as explanations and descriptions of any trends and correlations witnessed.
+                                Results:
+                                <br>
+                                <p>The purpose of this project was to analyze how suicide rates have changed over time since 1985 to as recent as 2016.
+								To accomplish this analysis, data was extracted from Kaggle and cleaned through SQL/PgAmin4 in order to
+                                assemble distinct graphs that show the frequency of suicide rates over 30 years through generation, gender (male vs female), and through 210 countries. The results show
+                                that the highest rate of suicide through generation, gender, and country were (insert results). Overall, results were compiled in order to help future researchers and psychiatrists determine which generation, gender and country to pay particular attention to for suicide prevention. 
+                                <p>
 							</em>
 						</p>
 					</article>
@@ -97,84 +125,45 @@
 				<div class="sidebar-sticky">
 						<ul class="nav flex-column">
 						  <li class="nav-item">
-							<a class="nav-link active" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-							  Dashboard <span class="sr-only">(current)</span>
+							<a class="nav-link active" href="index.html">
+							  
+							  Directory: <span class="sr-only">(current)</span>
 							</a>
 						  </li>
 						  <li class="nav-item">
 							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
-							  Orders
+							<i class= 'fa fa-female'></i>
+							<i class= "fa fa-male"></i> 
+							<i class= "fa fa-female"></i> 
+							  Generation 
+							<a href="generation_landing.html"></a>
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="gender.html">
+							  <i class= 'fa fa-venus'></i>
+							  <i class= 'fa fa-mars'></i>
+                                Gender
 							</a>
 						  </li>
 						  <li class="nav-item">
 							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-							  Products
+							<i class="fa fa-map-marker"></i>	
+							  
+							    Country
 							</a>
 						  </li>
 						  <li class="nav-item">
 							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-							  Customers
+							 <i class='fa fa-signal'></i> 
+							  GDP
 							</a>
 						  </li>
 						  <li class="nav-item">
 							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-							  Reports
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-							  Integrations
-							</a>
-						  </li>
-						</ul>
-				
-						<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						  <span>Saved reports</span>
-						  <a class="d-flex align-items-center text-muted" href="#">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-						  </a>
-						</h6>
-						<ul class="nav flex-column mb-2">
-						  <li class="nav-item">
-							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-							  Current month
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-							  Last quarter
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-							  Social engagement
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" href="#">
-							  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-							  Year-end sale
-							</a>
-						  </li>
-						</ul>
-					  </div>
-				
-					
-			</div>
-		</div>
-	
-		<footer class="p-2">
-			<p>@ Copyright Coding Bootcamp 2019</p>
-		</footer>
+							  
+
+						
 	
 
 	<!-- jQuery library -->
@@ -185,7 +174,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-	<script type="text/javascript" src="/static/js/genderapp.js"></script>
+    <!-- <script type="text/javascript" src="/static/js/generationapp.js"></script> -->
+    <!-- <script type="text/javascript" src="/static/js/genderapp.js"></script> -->
   
 </body>
 

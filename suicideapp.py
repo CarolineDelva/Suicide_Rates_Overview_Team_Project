@@ -53,6 +53,22 @@ print(dir(Base.classes))
 def main():
     return render_template("index.html")
 
+@app.route("/gender.html")
+def genderpage():
+    return render_template("gender.html") 
+
+@app.route("/generation_landing.html")
+def generationpage():
+    return render_template("generation_landing.html")
+
+@app.route("/data.html")
+def data():
+    return render_template("data.html")
+
+@app.route("/data2.html")
+def data2():
+    return render_template("data2.html")
+
 
 @app.route("/suicideratesdata")
 def suicidedata():
@@ -133,7 +149,9 @@ def suicide_by_continent():
 
 
     combined_data_by_continent = combined_data.groupby(['ContinentName', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
-    suicide_by_continent = combined_data_by_continent.to_json(orient='records')
+    combined_data_by_continent = combined_data_by_continent.reset_index()    
+    suicide_by_continent = combined_data_by_continent.to_json(orient='records', index=True)
+    print(suicide_by_continent)
 
     return suicide_by_continent
 
@@ -173,11 +191,74 @@ def suicide_by_country():
     
 
     combined_data_by_country = combined_data.groupby(['country', 'sex']).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
-    combined_data_by_country = combined_data_by_country.sort_values(by=['suicides_no'])
-    suicide_by_country = combined_data_by_country.to_json(orient='records')
+    combined_data_by_country = combined_data_by_country.reset_index()    
+    suicide_by_country = combined_data_by_country.to_json(orient='records', index=True)
     return suicide_by_country
       
 
+@app.route("/suicidedatabycountryjpg")
+def suicidedatajpg():
+
+    POSTGRES = {
+        'user': 'postgres',
+        'pw': api_key,
+        'db': 'suicide_rates_overview_db',
+        'host': 'localhost',
+        'port': '5432',
+    }
+
+
+
+    engine = create_engine('postgresql://%(user)s:%(pw)s@%(host)s:%(port)s/%(db)s'% POSTGRES)
+    df_suicide_rates_df = pd.read_sql('select * from suicides_rates_db', engine)
+    df_suicide_rates_df
+
+    countries_coordinates = requests.get("http://techslides.com/demos/country-capitals.json")
+
+
+
+
+
+    countries_df = pd.read_json(json.dumps(countries_coordinates.json()), orient= 'list')
+
+
+
+    flag_file = pd.read_csv("Data/Country_Flags.csv")
+    flag_file["Country"] = flag_file["Country"].str.replace(" ", "")
+
+
+
+    combined_data =df_suicide_rates_df.merge(countries_df, left_on ="country", right_on='CountryName')
+    combined_data2 = combined_data.merge(flag_file, left_on='country', right_on='Country')
+
+
+
+    combined_data = combined_data2[['Country', 'sex', 'suicides_no', 'CapitalLatitude', 'CapitalLongitude', 'ContinentName', "Images File Name", "ImageURL"]]
+    combined_data
+
+
+
+    combined_data.to_json()
+
+    combined_data['suicides_no'] = pd.to_numeric(combined_data['suicides_no'], errors='coerce')
+    combined_data['CapitalLatitude'] = pd.to_numeric(combined_data['CapitalLatitude'], errors='coerce')
+    combined_data['CapitalLongitude'] = pd.to_numeric(combined_data['CapitalLongitude'], errors='coerce')
+    combined_data = combined_data.dropna()
+
+
+
+    combined_data_by_country = combined_data.groupby(['Country', 'sex', "Images File Name", "ImageURL"]).agg({'suicides_no' : 'sum', 'CapitalLongitude': 'mean', 'CapitalLatitude': 'mean'})
+    combined_data_by_country = combined_data_by_country.reset_index()    
+    suicide_by_country = combined_data_by_country.to_json(orient='records', index=True)
+    suicide_by_country
+    
+    
+
+
+
+
+    return suicide_by_country
+      
 
 
 

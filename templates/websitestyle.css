@@ -154,6 +154,7 @@ p{
   text-align: center;
 }
 
+
 /* Giving the .post element margin on 3 sides */
 .post {
   margin-top: 50px;
@@ -170,6 +171,14 @@ footer{
 
 body {
   background-image: url("WH51_800x.jpg");
+
+}
+
+#firstpage {
+  background-image: url("Hope.jpg");
+  alt:"Hope Written in Palm";
+  width:500px;
+  height:350px;
 
 }
 

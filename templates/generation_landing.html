@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Weather plots display using html-css.">
+	<title> Visualization-Bootstrap</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
+	<link rel="stylesheet" href="/static/css/websitestyle.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+		<nav class="navbar navbar-expand-lg navbar-white bg-white">
+			<a class="navbar-brand" href="#">Generation</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						
+						
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Plots
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="index.html">Generation</a>
+							<a class="dropdown-item" href="gender.html">Gender</a>
+							<!-- <a class="dropdown-item" href="country.html">Country</a> -->
+							<a class="dropdown-item" href="GDP.html">GDP</a>
+							
+						</div>
+					</li>
+					<li class="nav-item active">
+						<!-- <a class="nav-link" href="Comparison_Page.html">Comparison <span class="sr-only">(current)</span></a> -->
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="data.html">Data</a> 
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- <div class="jumbotron"> -->
+	
+		<!-- Row 3 -->
+		<div class="row">
+			<div class="leftDiv">
+				<div>
+					<h2> Summary: Generation and Suicide Rates Over Three Decades.</h2> 
+					<!-- insert image of graph -->
+				</div>
+				<hr>
+				<div class="imgWrapper">
+
+					<div id="generation">
+
+					</div>
+					<article>
+
+						<p> 
+								<em>The purpose of this project was to analyze how suicide rates have changed over time since 1985 to as recent as 2016.To accomplish this analysis, data was extracted from Kaggle and cleaned through SQL/PgAmin4 in order to assemble a multi-line graph showcasing the frequency of suicide rates over 30 years, and assessing which generation holds the highest suicide rate. This information is important because it can help future researchers and psychiatrists determine which age-range/generation to pay particular attention to for suicide prevention. Generations that were focused on included: Generation X, Silent, G.I. Generation, Baby Boomers, Millennials, and Generation Z. The X Axis displays years from 1985 to 2016 and on the Y Axis it shows number of suicides according to those years.
+									</p>
+									<br>
+									Results:
+									<br>
+									<p>In order to determine the generation with the highest frequency of suicide from 1985-2016, an interactive multi-line graph was created from Canvas JS to individually, and as a group, assess which generation has the highest suicide rate. Results show that the Baby Boomers have the highest frequency of suicide rates compared to the other generations; whereas, Generation Z showed the lowest frequency. Researchers from Rutgers University suggest that the cause for Baby Booomers' high risk for suicide could be due to physical disabilties and chronic illness that many mid-life individuals experience; as well as, job loss, lonliness, substance abuse, and inability to socially-integrate into modern societal trends.
+							
+							</em>
+						</p>
+					</article>
+				</div>
+			</div>
+	
+			<div class="rightDiv">
+				<div>
+					<h2> Visualizations </h2>
+				</div>
+				<hr>
+				<div class="sidebar-sticky">
+						<ul class="nav flex-column">
+						  <li class="nav-item">
+							<a class="nav-link active" href="index.html">
+							  
+							  Directory: <span class="sr-only">(current)</span>
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="generation_landing.html">
+							<i class= 'fa fa-female'></i>
+							<i class= "fa fa-male"></i> 
+							<i class= "fa fa-female"></i> 
+							  Generation 
+							<!-- <a href="generationapp.html"></a> -->
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="gender.html">
+							  <i class= 'fa fa-venus'></i>
+							  <i class= 'fa fa-mars'></i>
+                                Gender
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="gender.html">
+							<i class="fa fa-map-marker"></i>
+								GDP
+							</a>
+					  	</li>
+					  	<li class="nav-item">
+							<a class="nav-link" href="#">	
+							  
+							    <!-- Country
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">
+							 <i class='fa fa-signal'></i>  -->
+							  <!-- GDP
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#"> -->
+							
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    /<script type="text/javascript" src="/static/js/generationapp.js"></script>
+	<!-- <script type="text/javascript" src="/static/js/genderapp.js"></script> -->
+	<!-- <script type="text/javascript" src="/static/js/app.js"></script> -->
+	<!-- <script type="text/javascript" src="/static/js/GDP.js"></script> -->
+	
+  
+</body>
+
+</html>
+	
