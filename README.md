@@ -77,9 +77,11 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 
 
 ## Technologies
-* Python (Jupyter Notebook, BeautifulSoup, Pandas, Requests/Splinter).
+* Python (Jupyter Notebook, Pandas, Flask, SQLalchemy, requests, json).
 * HTML
-* MongoDB (pymongo)
+* CSS
+* JavaScript (D3)
+* Postgres
 
 ## Needed for this project 
 * Procfile
