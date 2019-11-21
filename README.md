@@ -133,7 +133,7 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 ![SVM](SuicideStudyApp/static/css/supportvectormachinelearning.PNG)
 
 #### Random Forest Regression 
-![random forest](SuicideStudyApp/static/css/randomforestmachinelearning.PNG
+![random forest](SuicideStudyApp/static/css/randomforestmachinelearning.PNG)
 
 ## Conclusion 
 
