@@ -12,7 +12,7 @@ This study intends to identify who is at risk through descriptive analysis, data
 
 The final project include the following: 
 
-#### Back-End Development
+## Back-End Development
 
 ##### Extract
 
@@ -47,17 +47,17 @@ Using Pandas, the dataset was merged with the API. The unwanted columns and empt
 
 The transformed dataset was then loaded to a local Postgres database.
 
-#### Front-End Development
+## Front-End Development
 
 The front end was created using Bootstrap and W3 school templates. The final front-end was achieved by compiling various sections of those templates. The HTML and CSS were modified to include the appropriate text and graphs.
 
 The graphs were created using the JavaScript library, Data Driven Documents D3. The interactivity was achieved using event listeners, HTML buttons and dropdowns.
 
-#### Data Analysis
+## Data Analysis
 
 The data analysis was conducted using stats and stats.py from Python. The function used were linear regression, one-way ANOVA, and Independent T-test.
 
-#### Machine Learning
+## Machine Learning
 
 * Linear Regression 
 * Decision Tree Regression
