@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>GENDER</title>
+    <title>Gross Domestic Product</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
 
@@ -25,12 +26,15 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-
+	<!-- Latest compiled and minified CSS -->
+	<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+		
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
     <link rel="stylesheet" href="/static/css/suicidestyle.css">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
-<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
 
     <style>
@@ -50,7 +54,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    
   </head>
   <body>
 
@@ -154,10 +158,6 @@
                       <hr>
 
 
-
-
-
-
                       <ul class="nav flex-column">
                           <li style="color:gray"> <h4>Machine Learning</h4></li>                   
                      
@@ -191,23 +191,14 @@
                                   Random Forest							
                                 </a>
                               </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="deeplearning.html">
-                                    <i class="icon-book"></i>
-                                    <i class='icon-book'></i>
-                                	
-                                  
-                                    Deep Learning
-                                </a>
-                              </li>
+                         
                              
                          
                             
                             </ul>
-                            
-                            <br>
-                            <hr>
 
+
+      </div>
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
@@ -216,170 +207,122 @@
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Print</button>
-            
-          </div>
-         
+     
+          </div>         
         </div>
-	  </div>
-	  <style>
-		   .wrapper{
-    position: relative;
+      </div>
+
+
+
+
+
+      <!-- Load d3.js and the geo projection plugin -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
     
-  }
-  #lefttext {
-  position:relative;
-  float:left;
-  width:200px;
-  ;
-  
-  }
+    <svg id="map" height=600 width=1050></svg>
 
-  #genderbycontinent, #genderbycountry{
-  position:absolute;  
-  display: inline-block;  
-  width: 600px;
- 
-  
-  }
+      
 
-  
-  
-  #righttext {
-  position:relative;
-  float:right;
-  width:200px;
- 
-  } 
-	  </style>
-	  <div class="leftDiv">
-			
-			
-			<div>
-				<button id="combinationbycontinent">Combine by Continent </button>
-				<button id="gendersplitbycontinent">Gender by Continent</button>
-				<button id="combinationbycountry">Combine by Country </button>
-				<button id="gendersplitbycountry">Gender by Country</button>
-			</div>			
-				<div id="lefttext">
-					<article>
-
-						<p>
-							<br>
-							<strong>Suicide Rates on a Global Scale</strong>
-							<br>
-							<p>
-								This is a packed bubble layout chart representation of the world's suicide rates. The size
-								of each circle represents the total number of suicides of men and women between the
-								years of 1985 and 2016. Antartica was omitted from this graph as it is unhabitted.
-							</p>
-
-							<br>
-							<br>
-							<p>Hover over each continent circle to get suicide rates</p>
-
-						</p>
-					</article>
-				</div>
-
-			   <div class='wrapper'>
-				<div id="genderbycontinent"></div>
-				<div id="genderbycountry" style="visibility: hidden"></div>
-
-			    </div>
-
-
-			<div id="righttext"></div>
-
-
-
-
-
-   </div>
-   </div>
-    
-
-
-
-    <div class="gender-article">
+      <div class="gdp-article">
 
         	
-        <hr>             
-                        
-                <article>
-
-                    <p>
-                        <br>
-                        <h1><strong>Gender and Suicide Rates</strong></h1>
-                        <br>
-                        <p>Which sex has a greater suicide rate? 
+          <hr>             
                           
-                         <p> According <a href = "https://www.who.int/news-room/detail/09-09-2019-suicide-one-person-dies-every-40-seconds">WHO's</a> report men commit sucide at a higher rate than women. This analysis supports this claim as male suicide rates consist of <b>75</b> percent of the data, whereas female suicide rates consist of <b>25</b> percent of the data. </p>
-                            
-                         <p>A T-test was conducted using <a href = "https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.iqr.html">SciPy.stats</a> to understand whether the difference between female suicide rates and male suicide rates was significant. First, the T-Test was conducted using the sum of suicide rates in all continent based on sex. As seen in the snipet below, the p-value of the t-test was 0.28, which is greater than 0.05. This means that this sample shows that there is no significant difference between female suicide rates and male suicide rates based on continents. This is because this sample size is less than 35, which is affecting the p-value</p>
-                         
-                         <img class="card-img-top" src="/static/css/continentgenderttest.PNG" alt="ETL" height="75" width="50">
-                         <br>
-                         <br>
-                         <p>Another T-test was conducted using  <a href = "https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.iqr.html">SciPy.stats</a> with the sum of suicide rates in 101 countries based on sex. As seen in the snipet below, the p-value of the t-test was 0.01, which is less than 0.05. This means that this sample shows that <b>there is significant difference between female suicide rates and male suicide rates</b> in all countries.</p>
-                          
-                         <img class="card-img-top" src="/static/css/countryttest.PNG" alt="ETL" height="75" width="50">
+                  <article>
+  
+                      <p>
+                          <br>
+                          <h1><strong>Gross Domestic Product per Capita and Suicide Rates</strong></h1>
+                          <br>
+                          <p>How does the Gross Domestic Product per Capita of a country affect average suicide rates?</p>
 
-                        <br>
-                        <br>
-
-                          <p>Our exploration futher shows that men in Europe have the greatest number of suicide between 1985 to 2016 followed by Asia, South America, Australia, North America and Africa </p>
-                        
-
-                          <img class="card-img-top" src="/static/css/maleincontinent.PNG" alt="ETL" height="300" width="50">
+                          <p>A linear regression  was conducted using <a href = "https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.iqr.html">SciPy.stats </a> to determine the correlation between suicide rate rates an population size in countries around the globe. </p>
+                          <br>
+                          <h4>Africa</h4>
+                          <p>Based on the result of the linear regression, the R value was -0.7 and the p-value was 0.47. It can be determined that <b>there is a strong negative correlation between average suicide rates and GDP per capita of countries in Africa </b>. However, the p-value demonstrated that this negative correlation is not significant</p>
+                          <img class="card-img-top" src="/static/css/gdpregressionafrica.PNG" alt="ETL" height="250" width="50">
 
                           <br>
+                          <h4>Asia</h4>
+                          <p>Based on the result of the linear regression, the R value was 0.12 and the p-value was 0.61. It can be determined that <b>there is a weak positive correlation between average suicide rates and GDP per capita of countries in Asia</b>.  However, the p-value demonstrated that this negative correlation is not significant. </p>
+                          <img class="card-img-top" src="/static/css/gdpregressionasia.PNG" alt="ETL" height="250" width="50">
                           <br>
-                        <p>Our exploration shows the same fact for women. Between 1985 to 2016, female suicide rates is greater in Europe followed by Asia, South America, Australia, North America and Africa </p>
-                        <img class="card-img-top" src="/static/css/femaleincontinent.PNG" alt="ETL" height="300" width="50">
-                        <br>
-                        <br>
-                        <p><em>Check out graph above for a better visualization</em></p>
-                        
-                        <p>A one-way ANOVA was conducted using <a href = "https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.iqr.html">SciPy.stats</a> to understand whether the difference in suicide rates in all the continents As seen in the snipet below, the p-value of the t-test was 0.66, which is greater than 0.05. This means that this sample shows that <b>there is no significant difference in suicide rates between all the continents</b></p>
-                         
-                        <img class="card-img-top" src="/static/css/continentanova.PNG" alt="ETL" height="75" width="50">
+                          <h4>North America</h4>
+                          
+                          <p>Based on the result of the linear regression, the R value was -0.19 and the p-value was 0.54. It can be determined that <b>there is a weak negative correlation between average suicide rates and GDP per capita of countries in North America </b>. However, the p-value demonstrated that this negative correlation is not significant. </p>
 
+                          
+                          <img class="card-img-top" src="/static/css/gdpregressionnorthamerica.PNG" alt="ETL" height="250" width="50">
+
+
+                        <br>
+                          <h4>South America</h4>
+
+                          <p>Based on the result of the linear regression, the R value was 0.37 and the p-value was 0.31. It can be determined that <b>there is a weak positive correlation between average suicide rates and GDP per capita of countries in South America </b>. However, the p-value demonstrated that this negative correlation is not significant. </p>
+
+                          <img class="card-img-top" src="/static/css/gdpregressiongsouthamerica.PNG" alt="ETL" height="250" width="50">
+                          <br>
+                          <h4>Australia</h4>
+                          <p>Based on the result of the linear regression, the R value was 0.89 and the p-value was 0.107. It can be determined that <b>there is a strong positive correlation between average suicide rates and GDP per capita of countries in Australia </b>. However, the p-value demonstrated that this negative correlation is not significant. </p>
+
+                          <img class="card-img-top" src="/static/css/gdpregressionaustralia.PNG" alt="ETL" height="250" width="50">
+                          
+                          <br>
+                          
+                          <h4>Europe</h4>
+                          <p>Based on the result of the linear regression, the R value was 0.02 and the p-value was 0.89. It can be determined that <b>there is a weak positive correlation between average suicide rates and GDP per capita of countries in Europe </b>. However, the p-value demonstrated that this negative correlation is not significant. </p>
+
+                        
+                          <img class="card-img-top" src="/static/css/gdpregressioneurope.PNG" alt="ETL" height="250" width="50">
+
+                          <p>In all, <b>there is no significant correlation between GDP per capita and suicide rates in all continents</b>.</p>
+  
+                        </p>
+                        <br>
+                        <hr>
+  
+                        
+                           
                       </p>
-                      <br>
-                      <hr>
+                  </article>
+              
 
-                      
-                         
-                    </p>
-                </article>
-    </div>
-                  
+
+
+
+    
+    
+    
+            </div>
         
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <!-- <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <script src="dashboard.js"></script></body>
+        
 
 
 
 
 
-						<!-- jQuery library -->
-						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 
-						<!-- Latest compiled JavaScript -->
-						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  <!-- D3 JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src= "/static/js/GDP.js"></script>
+  <script type="text/javascript" src="/static/js/config.js"></script>
 
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-						<!-- <script type="text/javascript" src="/static/js/generationapp.js"></script> -->
-						<script type="text/javascript" src="/static/js/genderapp2.js"></script>
-						<!-- <script type="text/javascript" src="/static/js/app.js"></script> -->
-						<!-- <script type="text/javascript" src="/static/js/GDP.js"></script> -->
 
 
-</body>
-
+  </body>
 </html>
-

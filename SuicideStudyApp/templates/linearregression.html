@@ -1,0 +1,213 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Multiple Linear Regression</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Weather plots display using html-css.">
+	<title> Global Suicide Rates Study</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+		
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
+    <link rel="stylesheet" href="/static/css/suicidestyle.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+      <header>
+          <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About Me</h4>
+              <p class="text-muted">Caroline is a certified Full Stack Developer/ Data Scientist from Columbia Engineering Data Analysis Bootcamp with experience in AWS Postgres, Python, JavaScript, and Web Development. She is proficient in data analysis, data visualization,  machine learning and deep learning.</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.linkedin.com/in/caroline-delva-5184a172/" class="text-white">Visit my LinkedIn</a></li>
+                <li><a href="https://github.com/CarolineDelva" class="text-white">Visit my Github</a></li>
+                <li><a href="aboutmepage.html" class="text-white">About me </a></li>
+              </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> -->
+              <strong>Home</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+          </div>
+          </header>
+
+<br>
+<br>
+<br>
+<br>
+
+              	
+
+
+
+        
+    <main role="main" class="container">
+            <div class="row">
+              <div class="col-md-8 blog-main">
+                <h3 class="pb-3 mb-4 font-italic border-bottom">
+                 Suicide Rates Study
+                </h3>
+      
+                <div class="blog-post">
+                  <h2 class="blog-post-title">Multiple Linear Regression for Suicide Rates</h2>
+                  <p class="blog-post-meta">October 2019 by <a href="aboutmepage.html">Caroline</a></p>
+      
+                  <p>A machine learning model conducted in this study was <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">multiple linear regression</a> from Scikit Learn to predict suicides number based on population, GDP for Year, and GDP per Capita. As opposed to a simple linear regression, a multiple linear regression analyzes the relationship between an dependent variable (y value) and multiple independent values (x values). In this study, the y values was suicide number and that x values were population, gdp for year, and gpd per capita. </p>
+                    
+                  <p> After outliers were removed from the data, the data was seperated into a training data and testing data. The data was split so that the performance of the model can be tested before the application goes into production. The training data was used to trained the data and the testing data was used to test the data. </p>
+               
+                  
+                  <p>The training data returned a score of 0.40 and the testing score returned a score of 0.40. The score of this multiple linear regression is low, which indicated  that there was no linear regression between population, GDP for year, and GDP per Capita on suicide number. </p>
+                  <br>
+                  <br>
+
+                  <img class="card-img-top" src="/static/css/machinelearningmultiplelinearegression.PNG" alt="ETL" height="250" width="50">
+                  <br>
+                  <br>
+
+
+                  <p>The graph below represents the training and testing data from the  multiple linear regression model. From the graph, it was clear that both the training data and testing data could not closely fit the line of best fit.   </p>
+
+                  <img class="card-img-top" src="/static/css/multiplelinearregression.png" alt="ETL" height="450" width="50">
+
+                  
+
+                 
+                </div><!-- /.blog-post -->
+      
+               
+      
+      
+              </div><!-- /.blog-main -->
+      
+              <aside class="col-md-4 blog-sidebar">
+                <div class="p-3 mb-3 bg-light rounded">
+                  <h4 class="font-italic"><a href="contentpage.html">About</a></h4>
+                  <p class="mb-0">This study intends to identify the population at risk for suicide for through descriptive analysis, data visualization and machine learning models.
+                    
+                    </p>
+                </div>
+      
+                <div class="p-3">
+                  <h4 class="font-italic">Visualization</h4>
+                  <ol class="list-unstyled mb-0">
+                    <li><a href="age.html">Age</a></li>
+                    <li><a href="data.html">Data</a></li>
+                    <li><a href="gender.html">Gender</a></li>
+                    <li><a href="generation.html">Generation</a></li>
+                    <li><a href="GDP.html">Gross Domestic Procut</a></li>
+                    <li><a href="population.html">Population</a></li>
+                    <li><a href="year.html">Year</a></li>
+               
+                  </ol>
+                </div>
+
+                
+                <div class="p-3">
+                    <h4 class="font-italic">Machine Learning Models</h4>
+                    <ol class="list-unstyled mb-0">
+                      <li><a href="linearregression.html">Multiple Linear Regression</a></li>
+                      <li><a href="desiciontree.html">Decision Tree Regression</a></li>
+                      <li><a href="supportvectormachine.html">Support Vector Machine Regression</a></li>
+                      <li><a href="randomforest.html">Random Forest Regression</a></li>
+                      
+                    </ol>
+                  </div>
+      
+           
+              </aside><!-- /.blog-sidebar -->
+      
+            </div><!-- /.row -->
+      
+          </main><!-- /.container -->
+      
+     <hr>
+     <br>
+     <br>
+      
+         
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      
+      
+      
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+     
+        
+
+
+
+
+
+  
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  <!-- D3 JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src= "/static/js/GDP.js"></script>
+  <script type="text/javascript" src="/static/js/config.js"></script>
+</body>
+</html>

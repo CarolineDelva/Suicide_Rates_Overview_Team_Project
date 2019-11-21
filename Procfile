@@ -1,0 +1,1 @@
+web: gunicorn ML_Movies.imdbmoviesapp:app 

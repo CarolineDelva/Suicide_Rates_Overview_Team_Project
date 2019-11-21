@@ -1,0 +1,312 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>YEAR</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Weather plots display using html-css.">
+	<title> Global Suicide Rates Study</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+		
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
+    <link rel="stylesheet" href="/static/css/suicidestyle.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About Me</h4>
+          <p class="text-muted">Caroline is a certified Full Stack Developer/ Data Scientist from Columbia Engineering Data Analysis Bootcamp with experience in AWS Postgres, Python, JavaScript, and Web Development. She is proficient in data analysis, data visualization,  machine learning and deep learning.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.linkedin.com/in/caroline-delva-5184a172/" class="text-white">Visit my LinkedIn</a></li>
+            <li><a href="https://github.com/CarolineDelva" class="text-white">Visit my Github</a></li>
+            <li><a href="aboutmepage.html" class="text-white">About me </a></li>
+          </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> -->
+          <strong>Home</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+      </div>
+      </header>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+                <ul class="nav flex-column">
+                    <li style="color:gray"> <h4>Visualizations</h4></li>                   
+               
+                        <li class="nav-item">
+                          <a class="nav-link" href="age.html">
+                            <i class='fa fa-birthday-cake'></i> 
+                             Age
+                           </a>
+                         </li>
+                         <li class="nav-item">
+                          <a class="nav-link" href="data.html">
+                             <i class='fa fa-database'></i> 
+                              Data
+                            </a>
+                          </li>
+                        
+
+                         <li class="nav-item">
+                          <a class="nav-link" href="gender.html">
+                            <i class= 'fa fa-venus'></i>
+                            <i class= 'fa fa-mars'></i>
+                              Gender
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="generation.html">
+                          <i class= 'fa fa-female'></i>
+                          <i class= "fa fa-male"></i> 
+                          <i class= "fa fa-female"></i> 
+                            Generation 							
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="GDP.html">
+                          <i class="fa fa-money"></i>	
+                            
+                              GDP
+                          </a>
+                        </li>
+                       
+                      
+                        <li class="nav-item">
+                          <a class="nav-link" href="population.html">
+                           <i class='fa fa-group'></i> 
+                            Population
+                          </a>
+                        </li>
+                       
+                       <li class="nav-item">
+                       <a class="nav-link" href="year.html">
+                          <i class='fa fa-calendar'></i> 
+                           Year
+                         </a>
+                       </li>
+                      
+                      </ul>
+                      
+                      <br>
+                      <hr>
+
+                      <ul class="nav flex-column">
+                        <li style="color:gray"> <h4>Machine Learning</h4></li>                   
+                   
+                            <li class="nav-item">
+                              <a class="nav-link" href="linearregression.html">
+                                <i class='fa fa-line-chart'></i> 
+                                 Multiple Regression
+                               </a>
+                             </li>
+                             <li class="nav-item">
+                              <a class="nav-link" href="desiciontree.html">
+                                 <i class='fa fa-tree'></i> 
+                                  Decision Tree
+                                </a>
+                              </li>
+                            
+    
+                             <li class="nav-item">
+                              <a class="nav-link" href="supportvectormachine.html">
+                                
+                                <i class= 'fa fa-window-close'></i>
+                                  Support Vector Machine
+                              </a>
+                            </li>
+    
+                            <li class="nav-item">
+                              <a class="nav-link" href="randomforest.html">
+                                  <i class='fa fa-tree'></i> 
+                                  <i class='fa fa-tree'></i> 
+                                  <i class='fa fa-tree'></i>  
+                                Random Forest							
+                              </a>
+                            </li>
+                         
+                           
+                       
+                          
+                          </ul>
+                          
+                          <br>
+
+     
+      </div>
+  </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Print</button>
+
+          </div>
+          
+        </div>
+      </div>
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+    
+        
+        <!-- Initialize a select button -->
+        <select id="selectButtonYEAR"></select>
+
+        <!-- Create a div where the graph will take place -->
+        <!-- <div id="YEAR"></div> -->
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        
+        <div id="YEAR"></div>
+
+      <!-- <canvas class="my-4 w-100" id="YEAR" width="900" height="380"></canvas> -->
+
+      
+      <div class="year-article">
+
+        	
+                <hr>             
+                                
+                        <article>
+    
+                            <p>
+                                <br>
+                                <h1><strong>Year and Suicide Rates</strong></h1>
+                                
+                                <br>
+                                <p>What is the average suicide rates in 101 countries between 1985 and 2016?</p>
+                               <p>A linear regression was conducted using <a href = "https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.iqr.html">SciPy.stats</a> to analyze the correlation between suicide rates and year in the top 5 countries. The analysis was conducted between the year of 1985 and 2016.</p>
+                              <p>First, the regression was conducted for the Russian Federation and it was found that there is a mild negative correlation (r-value = -0.634) between suicide rates and year. This means that as time goes on suicide rates in Russian Federation decreases. <b>That decrease overtime is statistically significant</b> because the analysis has a p-value (0.0003) less than 0.05.</p>
+                              
+                               <img class="card-img-top" src="/static/css/russianfederationyearregression.PNG" alt="ETL" height="250" width="50">
+                               <br>
+                               <br>
+                               <p>The regression was conducted for the United States and it was found that there is a strong positive correlation (r-value = 0.832) between suicide rates and year. This means that as time goes on suicide rates in United States increases. <b>That increase overtime is statistically significant</b> because the analysis has a p-value (6.25e-09) less than 0.05.</p>
+                              
+                               <img class="card-img-top" src="/static/css/usyearregression.PNG" alt="ETL" height="250" width="50">
+                               <br>
+                               <br>
+                               <p>The regression was conducted for the Japan and it was found that there is a medium positive correlation (r-value = 0.552) between suicide rates and year. This means that as time goes on suicide rates in Japan increases. <b>That increase overtime is statistically significant</b> because the analysis has a p-value (0.0012) less than 0.05.</p>
+                              
+
+                               <img class="card-img-top" src="/static/css/japanyearregression.PNG" alt="ETL" height="250" width="50">
+                               <br>
+                               <br>
+                               <p>The regression was conducted for the Republic of Korea and it was found that there is a strong positive correlation (r-value = 0.953) between suicide rates and year. This means that as time goes on suicide rates in Republic of Korea increases. <b>That increase overtime is statistically significant</b> because the analysis has a p-value (1.18e-16) less than 0.05.</p>
+                              
+                               <img class="card-img-top" src="/static/css/koreayearregression.PNG" alt="ETL" height="250" width="50">
+                               <br>
+                               <br>
+                               <p>The regression was conducted for the Ukraine and it was found that there is a weak negative correlation (r-value = -0.487) between suicide rates and year. This means that as time goes on suicide rates in Ukraine decrease. <b>That decrease overtime is statistically significant</b> because the analysis has a p-value (0.008) less than 0.05.</p>
+                              
+                               <img class="card-img-top" src="/static/css/ukraineyearregression.PNG" alt="ETL" height="250" width="50">
+
+
+                              </p>
+                              <br>
+                              <hr>
+        
+                              
+                                 
+                            </p>
+                        </article>
+    
+    
+    
+    
+    
+            </div>
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="dashboard.js"></script></body>
+
+
+
+
+
+						<!-- jQuery library -->
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+						<!-- Latest compiled JavaScript -->
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+						<!-- <script type="text/javascript" src="/static/js/generationapp.js"></script> -->
+						<script type="text/javascript" src="/static/js/year.js"></script>
+						<!-- <script type="text/javascript" src="/static/js/app.js"></script> -->
+						<!-- <script type="text/javascript" src="/static/js/GDP.js"></script> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>GENERATION</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Weather plots display using html-css.">
+	<title> Global Suicide Rates Study</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+		
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
+    <link rel="stylesheet" href="/static/css/suicidestyle.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+
+      <header>
+          <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About Me</h4>
+              <p class="text-muted">Caroline is a certified Full Stack Developer/ Data Scientist from Columbia Engineering Data Analysis Bootcamp with experience in AWS Postgres, Python, JavaScript, and Web Development. She is proficient in data analysis, data visualization,  machine learning and deep learning.</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.linkedin.com/in/caroline-delva-5184a172/" class="text-white">Visit my LinkedIn</a></li>
+                <li><a href="https://github.com/CarolineDelva" class="text-white">Visit my Github</a></li>
+                <li><a href="aboutmepage.html" class="text-white">About me </a></li>
+              </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> -->
+              <strong>Home</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+          </div>
+          </header>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+                <ul class="nav flex-column">
+                    <li style="color:gray"> <h4>Visualizations</h4></li>                   
+               
+                        <li class="nav-item">
+                          <a class="nav-link" href="age.html">
+                            <i class='fa fa-birthday-cake'></i> 
+                             Age
+                           </a>
+                         </li>
+                         <li class="nav-item">
+                          <a class="nav-link" href="data.html">
+                             <i class='fa fa-database'></i> 
+                              Data
+                            </a>
+                          </li>
+                        
+
+                         <li class="nav-item">
+                          <a class="nav-link" href="gender.html">
+                            <i class= 'fa fa-venus'></i>
+                            <i class= 'fa fa-mars'></i>
+                              Gender
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="generation.html">
+                          <i class= 'fa fa-female'></i>
+                          <i class= "fa fa-male"></i> 
+                          <i class= "fa fa-female"></i> 
+                            Generation 							
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="GDP.html">
+                          <i class="fa fa-money"></i>	
+                            
+                              GDP
+                          </a>
+                        </li>
+                       
+                      
+                        <li class="nav-item">
+                          <a class="nav-link" href="population.html">
+                           <i class='fa fa-group'></i> 
+                            Population
+                          </a>
+                        </li>
+                       
+                       <li class="nav-item">
+                       <a class="nav-link" href="year.html">
+                          <i class='fa fa-calendar'></i> 
+                           Year
+                         </a>
+                       </li>
+                      
+                      </ul>
+                      
+                      <br>
+                      <hr>
+
+                      <ul class="nav flex-column">
+                          <li style="color:gray"> <h4>Machine Learning</h4></li>                   
+                     
+                              <li class="nav-item">
+                                <a class="nav-link" href="linearregression.html">
+                                  <i class='fa fa-line-chart'></i> 
+                                   Multiple Regression
+                                 </a>
+                               </li>
+                               <li class="nav-item">
+                                <a class="nav-link" href="desiciontree.html">
+                                   <i class='fa fa-tree'></i> 
+                                    Decision Tree
+                                  </a>
+                                </li>
+                              
+      
+                               <li class="nav-item">
+                                <a class="nav-link" href="supportvectormachine.html">
+                                  
+                                  <i class= 'fa fa-window-close'></i>
+                                    Support Vector Machine
+                                </a>
+                              </li>
+      
+                              <li class="nav-item">
+                                <a class="nav-link" href="randomforest.html">
+                                    <i class='fa fa-tree'></i> 
+                                    <i class='fa fa-tree'></i> 
+                                    <i class='fa fa-tree'></i>  
+                                  Random Forest							
+                                </a>
+                              </li>
+                     
+                         
+                            
+                            </ul>
+
+
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Print</button>
+
+          </div>
+        
+        </div>
+      </div>
+     
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+     
+          <select id="selDataset" onchange="getData(this.value)">
+              <option value="dataset1">United States</option>
+              <option value="dataset2">Russian Federation</option>
+              <option value="dataset3">Japan</option>
+              <option value="dataset4">Ukraine</option>
+              <option value="dataset5">Germany</option>
+              <option value="dataset6">France</option>
+              <option value='dataset7'>Republic of Korea</option>
+
+
+              <option value="dataset8">Poland</option>
+              <option value="dataset9">Brazil</option>
+              <option value="dataset10">Sri Lanka</option>
+              <option value="dataset11">United Kingdom</option>
+              <option value="dataset12">Canada</option>
+              <option value="dataset13">Kazakhstan</option>
+              <option value='dataset14'>Thailand</option>
+
+
+              <option value="dataset15">Italy</option>
+              <option value="dataset16">Hungary</option>
+              <option value="dataset17">Belarus</option>
+              <option value="dataset18">Romania</option>
+              <option value="dataset19">Mexico</option>
+              <option value="dataset20">Spain</option>
+              <option value='dataset21'>Australia</option>
+
+              <option value="dataset22">Belgium</option>
+              <option value="dataset23">Argentina</option>
+              <option value="dataset24">Czech Republic</option>
+              <option value="dataset25">Cuba</option>
+              <option value="dataset26">Netherlands</option>
+              <option value="dataset27">Lithuania</option>
+              <option value='dataset29'>Turkey</option>
+
+              <option value="dataset30">Austria</option>
+              <option value="dataset31">Serbia</option>
+              <option value="dataset32">Switzerland</option>
+              <option value="dataset33">Columbia</option>
+              <option value="dataset34">Finland</option>
+              <option value="dataset35">Uzbekistan</option>
+              <option value='dataset36'>Sweden</option>
+
+              <option value="dataset37">Philippines</option>
+              <option value="dataset38">Chile</option>
+              <option value="dataset39">Bulgaria</option>
+              <option value="dataset40">Croatia</option>
+              <option value="dataset41">Portugal</option>
+              <option value="dataset42">Slovakia</option>
+              <option value='dataset43'>Denmark</option>
+
+              
+              <option value="dataset44">Latvia</option>
+              <option value="dataset45">Slovenia</option>
+              <option value="dataset46">Ecuador</option>
+              <option value="dataset47">Norway</option>
+              <option value="dataset48">El Salvador</option>
+              <option value="dataset49">Kyrgyzstan</option>
+              <option value='dataset50'>Mongolia</option>
+              
+
+              <option value="dataset51">New Zealand</option>
+              <option value="dataset52">Estonia</option>
+              <option value="dataset53">Ireland</option>
+              <option value="dataset54">Uruguay</option>
+              <option value="dataset55">Greece</option>
+              <option value="dataset56">Singapore</option>
+              <option value='dataset57'>Nicaragua</option>
+
+              <option value="dataset57">Puerto Rico</option>
+              <option value="dataset58">South Africa</option>
+              <option value="dataset59">Israel</option>
+              <option value="dataset60">Turkmenistan</option>
+              <option value="dataset61">Guatemala</option>
+              <option value="dataset62">Costa Rica</option>
+              <option value='dataset63'>Bosnia and Herzegovina</option>
+
+
+              <option value="dataset64">Paraguay</option>
+              <option value="dataset65">Trinidad and Tobago</option>
+              <option value="dataset66">United Arab Emirates</option>
+              <option value="dataset67">Georgia</option>
+              <option value="dataset68">Mauritius</option>
+              <option value="dataset69">Guyana</option>
+              <option value='dataset70'>Panama</option>
+
+              <option value="dataset71">Azerbaijan</option>
+              <option value="dataset72">Albania</option>
+              <option value="dataset73">Armenia</option>
+              <option value="dataset74">Luxembourg</option>
+              <option value="dataset75">Cabo Verdes</option>
+              <option value="dataset76">Suriname</option>
+              <option value='dataset77'>Montenegro</option>
+              
+              <option value="dataset78">Qatar</option>
+              <option value="dataset79">Kuwait</option>
+              <option value="dataset80">Iceland</option>
+              <option value="dataset81">Cyprus</option>
+              <option value="dataset82">Bahrain</option>
+              <option value="dataset83">Macau</option>
+              <option value='dataset84'>Fiji</option>
+
+              <option value="dataset85">Malta</option>
+              <option value="dataset86">Oman</option>
+              <option value="dataset87">Belize</option>
+              <option value="dataset88">Aruba</option>
+              <option value="dataset89">Jamaica</option>
+              <option value="dataset90">Barbados</option>
+              <option value='dataset91'>Saint Lucia</option>
+
+              <option value="dataset92">Seychelles</option>
+              <option value="dataset93">Saint Vincent and Grenadines</option>
+              <option value="dataset94">Kiribati</option>
+              <option value="dataset95">Bahamas</option>
+              <option value="dataset96">Maldives</option>
+              <option value="dataset97">Grenada</option>
+              <option value='dataset98'>San Marino</option>
+
+
+              <option value="dataset99">Antigua and Barbuda</option>
+              <option value="dataset100">Saint Vincent and Grenadines</option>
+              <option value="dataset101">Saint Kitts and Nevis</option>
+              <option value="dataset102">Dominica</option>
+             
+
+
+
+          </select>
+      
+          <div id="pie"></div>
+      
+
+
+      <div class="generation-article">
+
+        	
+                <hr>             
+                <article>
+
+                    <p>
+                        <br>
+                        <h1><strong>Generation and Suicide Rates</strong></h1>
+                        <br>
+                        <p>Which generation has showed to be more at risk in the 6 continents? </p>
+                          
+
+                         
+                         <p>The current study considered average suicide rates for Boomers, Generation X, G.I. Generation, Silent Generation, Genereration Z, Millenials. The graph below demonstrates the average suicide rates for each generation in 102 countries.  The study also analyzed the average suicide rates between 1986 and 2016 in Africa, Asia, North America, South America, Australia and Europe. </p>
+                         
+  
+  
+                          <h4>Africa</h4>
+                          <p>In African countries, Boomers had the highest average suicide rates followed by the Generation X, Millenials, Silent, G.I. Generation, and Generation Z.  </p>
+                          <img class="card-img-top" src="/static/css/Africageneration.PNG" alt="ETL" height="300" width="50">
+                          <br>
+                          <br>
+  
+                        <h4>Asia</h4>
+                        
+                      <p>In Aisa countries, Boomers had the highest average suicide rates followed by the Silent, G.I. Generation, Generation X, Millenials, and Generation X. </p>
+                        
+                         <img class="card-img-top" src="/static/css/Asiageneration.PNG" alt="ETL" height="300" width="50">
+                         <br>
+                         <br>
+  
+                         
+                         <h4>North America</h4>
+                        
+                         <p>In North American countries,  Boomers had the highest average suicide rates followed by the Silent, G.I. Generation, Generation X,, Millenials, and Generation Z. </p>
+                           
+                            <img class="card-img-top" src="/static/css//NorthAmericaGeneration.PNG" alt="ETL" height="300" width="50">
+                            <br>
+                            <br>
+     
+                            <h4>South America</h4>
+                        
+                            <p>In South American countries, Boomers had the highest average suicide rates followed by the Generation X, Millenials, Silent, G.I. Generation, and Generation Z. </p>
+                              
+                               <img class="card-img-top" src="/static/css/SouthAmericageneration.PNG" alt="ETL" height="300" width="50">
+                               <br>
+                               <br>
+                          
+                               <h4>Australia</h4>
+                        
+                            <p>In Australia, Boomers had the highest average suicide rates followed by the Generation X, Silent, G.I. Generation, Millenials, Generation Z. </p>
+                              
+                               <img class="card-img-top" src="/static/css/Australiageneration.PNG" alt="ETL" height="300" width="50">
+                              <br>
+                               <br>
+                               <h4>Europe</h4>
+                               
+                        
+                            <p>In European countries, Boomers had the highest average suicide rates followed by the Silent, G.I. Generation, Generation X, Millenials, and Generation Z. </p>
+                              
+                               <img class="card-img-top" src="/static/css/Europegeneration.PNG" alt="ETL" height="300" width="50">
+                               <br>
+                               <br>
+        
+        
+                               <p>A one-way ANOVA was conducted using <a href = "https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.iqr.html">SciPy.stats</a> to understand whether the difference between suicide rates in all the continents is significant. As seen in the snipet below, the p-value of the t-test was 0.001, which is smaller than 0.05. This means that this sample shows that <b>there is a significant difference in average suicide rates based on gemeration between all the continents.</b></p>
+  
+                         
+                         <img class="card-img-top" src="/static/css/generationanova.PNG" alt="ETL" height="75" width="50">
+                        </p>
+                        <br>
+                        <hr>
+  
+                        
+                           
+                      </p>
+                  </article>
+                
+    
+    
+    
+    
+    
+            </div>
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+   
+	
+
+
+
+						<!-- jQuery library -->
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+						<!-- Latest compiled JavaScript -->
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+						<!-- <script type="text/javascript" src="/static/js/generationapp.js"></script> -->
+						<script type="text/javascript" src="/static/js/generation.js"></script>
+						<!-- <script type="text/javascript" src="/static/js/app.js"></script> -->
+						<!-- <script type="text/javascript" src="/static/js/GDP.js"></script> -->
+
+
+</body>
+
+</html>

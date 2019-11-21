@@ -1,0 +1,653 @@
+
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
+body {
+  background: #f1f1f1;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom:10 px;
+  text-align:left;
+  background-color: white;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  background-color: #d5f4e6;
+  height: 100%;
+  font-size: 25px;
+  padding: 10px 10px
+  ;
+}
+
+.row{
+  padding: 4%;
+  display: grid;
+  grid-template-columns: 1000px 300px;
+  grid-gap: 35px;
+}
+
+.rightDiv{
+  background-color: #d5f4e6;
+  padding: 10px 10px;
+}
+
+.rightDiv hr{
+  margin: 25px;
+}
+
+.leftDiv{
+  padding: 40px 25px;
+  background-color: #d5f4e6;
+}
+
+.leftDiv hr{
+  margin: 40px;
+}
+
+.leftDiv h2, .rightDiv h2{
+  color:#618685;
+}
+
+.imgWrapper article a{
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 180px;
+  height: 180px;
+}
+
+.imgWrapper article p{
+  text-align: justify;
+  text-indent: 2em;
+}
+
+
+.img-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+p{
+	text-align:left;
+	font-size:20;	
+}
+
+.box-set {
+  position: relative;
+  height: 400px;
+  background: darkgray;
+}
+
+.box {
+  /* relative positioning */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #2db34a;
+  border: 2px solid black;
+}
+
+.box-1 {
+  top: 20px;
+}
+
+.box-2 {
+  left: 40px;
+}
+
+.box-3 {
+  right: 20px;
+  bottom: -10px;
+}
+
+/* Giving our navbar some padding and a background color */
+.navbar {
+  background:#618685;
+  padding: 0 4% 0 8%;
+}
+
+/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+.navbar li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* Getting rid of the default link styles here */
+.navbar li a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Styling the header, giving it a height, a background color, and some top padding */
+.header {
+  height: 200px;
+  padding-top: 20px;
+  background: #cdcdcd;
+}
+
+/* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
+.header h1 {
+  padding: 60px;
+  margin: 0;
+  color: #000;
+  text-align: center;
+}
+
+/* Giving the .post element margin on 3 sides */
+.post {
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#00CED1;
+}
+
+body {
+ 
+
+  background-color:#fefbd8 ;
+  
+  
+  }
+
+/* body {
+  background-image: url("69815.jpg");
+
+} */
+
+li > a {
+  color: #618685 !important
+}
+
+/* The styles for the parallax
+.body{
+  position: relative;
+  height: 550px;
+  padding: 20px;
+  margin: 0;  
+  background-image: url("/Picture/WH51_800x.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.body h1 {
+  margin-top: 200px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+}
+
+.body p {
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+} */
+
+
+
+/* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
+@media (max-width: 480px) {
+  .navbar li {
+    padding: 10px;
+  }
+      
+  .post {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .navbar ul {
+    visibility: hidden;
+  }
+
+  #nav-select {
+    visibility: visible;
+  }
+  
+  .box-1 {
+    background: purple;
+  } 
+}
+
+
+.dropdown:hover  div.dropdown-menu {
+  display: block;
+}
+
+
+
+.iframeContainer {
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+}
+
+/* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Padding bottom by footer height */
+ 
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Set the fixed height of the footer here */
+  height: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+#footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+.aText {
+  font-family: sans-serif;
+  font-size: 16px;
+  text-anchor: middle;
+}
+
+.active {
+  font-weight: bold;
+  fill: #000;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #c9c9c9;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #000;
+  cursor: pointer;
+}
+
+/* font size dependent on radius, see app.js */
+.stateText {
+  font-family: sans-serif;
+  fill: #fff;
+  text-anchor: middle;
+}
+
+.stateCircle {
+  fill: #89bdd3;
+  stroke: #e3e3e3;
+}
+
+.chart {
+  display: block;
+  margin: 0;
+}
+
+.d3-tip {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+/* Mobile Rules */
+@media screen and (max-width: 530px) {
+  .stateText {
+    display: none;
+  }
+
+  .aText {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aText {
+    font-size: 13px;
+  }
+}
+
+ 
+
+
+ .wrapper{
+    position: relative;
+    
+  }
+  #lefttext {
+  position:relative;
+  float:left;
+  width:200px;
+  ;
+  
+  }
+
+  #genderbycontinent, #genderbycountry{
+  position:absolute;  
+  display: inline-block;  
+  width: 600px;
+ 
+  
+  }
+
+  
+  
+  #righttext {
+  position:relative;
+  float:right;
+  width:200px;
+ 
+  } 
+
+
+
+  #map,
+  body,
+  html {
+    height: 100%;
+  }
+  
+  .legend {
+      line-height: 18px;
+      color: #555;
+      background: white;
+      padding: 6px 6px;
+     font: 12px Arial, Helvetica, sans-serif;    
+    border-radius: 5px;
+    height: 168px;
+  }
+  .legend i {
+      width: 30px;
+      height: 22px;
+      float: left;
+      opacity: 0.7;
+  }
+  
+  .legend ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    position: absolute;
+    /* clear: both; */
+  } 
+
+
+  /* Adding styles to the aside and filter form */
+.ufo-form {
+  margin-top: 50px;
+}
+
+.filters .panel-body {
+  padding: 0;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #8e979f;
+  outline: none;
+}
+
+#table-area th {
+  text-align: center;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 70px;
+}
+
+.loader {
+  margin-top: 50px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+
+// Notes on the classes:
+//
+// 1. .carousel.pointer-event should ideally be pan-y (to allow for users to scroll vertically)
+//    even when their scroll action started on a carousel, but for compatibility (with Firefox)
+//    we're preventing all actions instead
+// 2. The .carousel-item-left and .carousel-item-right is used to indicate where
+//    the active slide is heading.
+// 3. .active.carousel-item is the current slide.
+// 4. .active.carousel-item-left and .active.carousel-item-right is the current
+//    slide in its in-transition state. Only one of these occurs at a time.
+// 5. .carousel-item-next.carousel-item-left and .carousel-item-prev.carousel-item-right
+//    is the upcoming slide in transition.
+
+.carousel {
+  position: relative;
+}
+
+.carousel.pointer-event {
+  touch-action: pan-y;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  @include clearfix();
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  @include transition($carousel-transition);
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+.carousel-item-next:not(.carousel-item-left),
+.active.carousel-item-right {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-right),
+.active.carousel-item-left {
+  transform: translateX(-100%);
+}
+
+
+//
+// Alternate transitions
+//
+
+.carousel-fade {
+  .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+  }
+
+  .carousel-item.active,
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .active.carousel-item-left,
+  .active.carousel-item-right {
+    z-index: 0;
+    opacity: 0;
+    @include transition(0s $carousel-transition-duration opacity);
+  }
+}
+
+
+//
+// Left/right controls for nav
+//
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  // Use flex for alignment (1-3)
+  display: flex; // 1. allow flex styles
+  align-items: center; // 2. vertically center contents
+  justify-content: center; // 3. horizontally center contents
+  width: $carousel-control-width;
+  color: $carousel-control-color;
+  text-align: center;
+  opacity: $carousel-control-opacity;
+  @include transition($carousel-control-transition);
+
+  // Hover/focus state
+  @include hover-focus {
+    color: $carousel-control-color;
+    text-decoration: none;
+    outline: 0;
+    opacity: $carousel-control-hover-opacity;
+  }
+}
+.carousel-control-prev {
+  left: 0;
+  @if $enable-gradients {
+    background: linear-gradient(90deg, rgba($black, .25), rgba($black, .001));
+  }
+}
+.carousel-control-next {
+  right: 0;
+  @if $enable-gradients {
+    background: linear-gradient(270deg, rgba($black, .25), rgba($black, .001));
+  }
+}
+
+// Icons for within
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: $carousel-control-icon-width;
+  height: $carousel-control-icon-width;
+  background: no-repeat 50% / 100% 100%;
+}
+.carousel-control-prev-icon {
+  background-image: $carousel-control-prev-icon-bg;
+}
+.carousel-control-next-icon {
+  background-image: $carousel-control-next-icon-bg;
+}
+
+
+// Optional indicator pips
+//
+// Add an ordered list with the following class and add a list item for each
+// slide your carousel holds.
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0; // override <ol> default
+  // Use the .carousel-control's width as margin so we don't overlay those
+  margin-right: $carousel-control-width;
+  margin-left: $carousel-control-width;
+  list-style: none;
+
+  li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: $carousel-indicator-width;
+    height: $carousel-indicator-height;
+    margin-right: $carousel-indicator-spacer;
+    margin-left: $carousel-indicator-spacer;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: $carousel-indicator-active-bg;
+    background-clip: padding-box;
+    // Use transparent borders to increase the hit area by 10px on top and bottom.
+    border-top: $carousel-indicator-hit-area-height solid transparent;
+    border-bottom: $carousel-indicator-hit-area-height solid transparent;
+    opacity: .5;
+    @include transition($carousel-indicator-transition);
+  }
+
+  .active {
+    opacity: 1;
+  }
+}
+
+
+// Optional captions
+//
+//
+
+.carousel-caption {
+  position: absolute;
+  right: (100% - $carousel-caption-width) / 2;
+  bottom: 20px;
+  left: (100% - $carousel-caption-width) / 2;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $carousel-caption-color;
+  text-align: center;
+}

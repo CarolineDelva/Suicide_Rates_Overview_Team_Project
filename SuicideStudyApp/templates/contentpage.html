@@ -1,0 +1,290 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Suicide Rates Study</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Weather plots display using html-css.">
+	<title> Global Suicide Rates Study</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+		
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" > -->
+    <link rel="stylesheet" href="/static/css/suicidestyle.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+  
+  </head>
+  <body>
+        <header>
+                <div class="collapse bg-dark" id="navbarHeader">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About Me</h4>
+                        <p class="text-muted">Caroline is a certified Full Stack Developer from Columbia Engineering Data Analysis Bootcamp with experience in AWS Postgres, Python, JavaScript, and Web Development. She is proficient in data analysis, data visualization,  machine learning and deep learning. </p>
+                      </div>
+                      <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                          <li><a href="https://www.linkedin.com/in/caroline-delva-5184a172/" class="text-white">Visit my LinkedIn</a></li>
+                          <li><a href="https://github.com/CarolineDelva" class="text-white">Visit my Github</a></li>
+                          <li><a href="aboutmepage.html" class="text-white">About me </a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar navbar-dark bg-dark shadow-sm">
+                  <div class="container d-flex justify-content-between">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> -->
+                      <strong>Home</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                </div>
+              </header>
+
+<br>
+<br>
+<br>
+<br>
+
+              	
+
+
+
+        
+    <main role="main" class="container">
+            <div class="row">
+              <div class="col-md-8 blog-main">
+                <h1 class="pb-3 mb-4 font-italic border-bottom">
+                  Suicide Rates Study
+                </h1>
+      
+                <div class="blog-post">
+                  <h2 class="blog-post-title">Background</h2>
+                  <p class="blog-post-meta">October 15, 2019 by <a href="aboutmepage.html">Caroline</a></p>
+      
+                  <p>It is incredibly difficult to address the topic of suicide rates. It is however important to explore this dataset so mental health professionals and people can better understand and help prevent this tragedy. The World Health Organization <a href="https://www.who.int/news-room/fact-sheets/detail/suicide">(WHO)</a> reports that every year over 800,000 people commit suicide, which is about 40 victims per seconds.</p>
+                  
+                  <p>This study intends to identify who is at risk through descriptive analysis, data visualization and to predict suicide rates through machine learning models and deep learning</p>
+
+                  <br>
+                  <hr>
+                  <br>
+                 
+                  <h2>Back-End Development</h2>
+                  <h6 color="lightgray"><em>Extract</em></h6>
+                  <h4>Dataset</h4>
+                  <p>This dataset <em>“Suicide Rates Overview From 1985 to 2016”</em> was collected from <a href="https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016">Kaggle</a>. It comprises of suicide rates for 101 countries in all 6 continents around the world from 1985 to 2016. The dataset also provides these variables: year, gross domestic project (GDP), GDP per capita, Human Development Index (HDI) for year, suicide rates per 100k population, generation, age, sex, and population.</p>
+                    <p>As the main dataset does not list the continents, <a href="http://techslides.com/demos/country-capitals.json">Techslides'</a> application programming interface (API) was used to provide the countries’ continent and flag photos. Antarctica is not included in this study because it is currently uninhabited.</p>
+                 
+                 
+                    <img class="card-img-top" src="/static/css/ETL.jpg" alt="ETL" height="250" width="300">
+                  
+                  <h4>Variables</h4>
+                  <ul>
+                        <li><b>Country:</b> 101.</li>
+                        <li><b>Year:</b> 1985 - 2016.</li>
+                        <li><b>Sex:</b> Male - Female.</li>
+                       <li><b>Age:</b> 5-14 years,  15-24 years, 25-34 years, 35-54 years, 55-74 years, 75+ years.</li>
+                       <li><b>GDP per Capita:</b> The measurement for a country's standard of living for each individual based on its economy and its population.</li>
+                       <li><b>GDP per Year</b> The measurement of a country’s economic production every year.</li>
+                       <li><b>Generation</b> Z, Millenials, G.I., X, Silent, Boomers. </li>
+                       <li><b>Human Development Index (HDI):</b> The overall measurement of a country’s standard of living that accounts for litteracy, gdp and life expectency. </li>
+                       <li><b>Population:</b> The number of people who reside in a country every year.</li>
+                       <li><b>Continents:</b> Africa, Asia, Australia, Europe, North American and South America. Antarctica was not included in this study.</li>
+
+                      </ul> 
+                      
+
+                      <h6 color="lightgray"><em>Transform</em></h6>
+                      <h4>Data Cleaning</h4>
+                      <p>Using Pandas, the dataset was merged with the API. The unwanted columns and empty cells were dropped. The latitude and longitude from the API were turned into numbers. </p>
+
+                      <h6 color="lightgray"><em>Load</em></h6>
+                      <h4>Database</h4>
+                      <p>The transformed dataset was then loaded to a local Postgres database. </p>
+
+                      <br>
+                  <hr>
+                  <br>
+                  
+                  <h2>Flask Server</h2>
+                  <p>The flask server connected with the database and rendered the templates on the front-end. The data was then manipulated using Pandas and tranformed into rest APIs routes that fed the individual graphs.  </p>
+
+                  <br>
+                  <hr>
+                  <br>
+                  
+                  <h2>Front-End Development</h2>
+                  <p>The front end was created using Bootstrap and W3 school templates. The final front-end was achieved by compiling various sections of those templates. The HTML and CSS were modified to include the appropriate text and graphs.</p>
+                      <p>The graphs were created using the JavaScript library, Data Driven Documents D3. The interactivity was achieved using event listeners, HTML buttons and dropdowns.</p>
+                      <img class="card-img-top" src="/static/css/webdev.jpg" alt="ETL" height="250" width="300">
+                     
+                     
+                      <br>
+                      <hr>
+                      <br>
+                      <h2>Data Analysis</h2>
+                      <p>The data analysis was conducted using stats and stats.py from Python. The function used were linear regression, one-way ANOVA, and Independent T-test. </p>
+                      <br>
+                      <hr>
+                      <br>
+                      <h2>Machine Learning</h2>
+                      The machine learning was conducted using Scikit Learn from Python. 
+                      <br>
+                      <hr>
+                      <br>
+
+                </div><!-- /.blog-post -->   
+             
+            
+              
+      
+              </div><!-- /.blog-main -->
+      
+              <aside class="col-md-4 blog-sidebar">
+                <div class="p-3 mb-3 bg-light rounded">
+                  <h4 class="font-italic">Visualizations</h4>
+                  <div class="p-3">
+                        
+                        <ol class="list-unstyled mb-0">
+                          <li><a href="age.html">Age</a></li>
+                          <li><a href="data.html">Data</a></li>
+                          <li><a href="gender.html">gender</a></li>
+                          <li><a href="generation.html">Generation</a></li>
+                          <li><a href="GDP.html">GDP</a></li>
+                          <li><a href="population.html">Population</a></li>
+                          <li><a href="year.html">Year</a></li>
+                         
+                        </ol>
+                      </div>
+                </div>
+      
+                <div class="p-3">
+                  
+                  <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/static/css/linearregression.jpg" alt="Card image cap" height="250" width="300">
+                        <div class="card-body">
+                            <h5 class="card-title">Linear Regression</h5>
+                            <p class="card-text">Explore the model.</p>
+                            <a href="linearregression.html" class="btn btn-primary">LEARN MORE</a>
+                        </div>
+                        </div>		
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/static/css/decisiontree.jpg" alt="Card image cap" height="250" width="300">
+                            <div class="card-body">
+                                <h5 class="card-title">Decision Tree</h5>
+                                <p class="card-text">Explore the model.</p>
+                                <a href="desiciontree.html" class="btn btn-primary">LEARN MORE</a>
+                            </div>
+                            </div>
+                    
+                    
+                            
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/static/css/SVM.png" alt="Card image cap" height="250" width="300">
+                            <div class="card-body">
+                                <h5 class="card-title">Support Vector Machine</h5>
+                                <p class="card-text">Explore the model.</p>
+                                <a href="supportvectormachine.html" class="btn btn-primary">LEARN MORE</a>
+                            </div>
+                            </div>
+                    
+                    
+                                
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="/static/css/random forest.jpg" alt="Card image cap" height="250" width="300">
+                            <div class="card-body">
+                                <h5 class="card-title">Random Forest</h5>
+                                <p class="card-text">Explore the model.</p>
+                                <a href="randomforest.html" class="btn btn-primary">LEARN MORE</a>
+                            </div>
+                            </div>
+                    
+                        
+                </div>
+                <div class="p-3">
+                        <h4 class="font-italic">About me</h4>
+                        <ol class="list-unstyled">
+                          <li><a href="https://github.com/CarolineDelva">GitHub</a></li>
+                          <li><a href="https://www.linkedin.com/in/caroline-delva-5184a172/">LinkedIn</a></li>
+                          <li><a href="aboutmepage.html">About me</a></li>
+                        </ol>
+                      </div>
+                    </aside><!-- /.blog-sidebar -->
+      
+                <div class="p-3">
+                  
+                   
+                </div>
+              </aside><!-- /.blog-sidebar -->
+      
+            </div><!-- /.row -->
+      
+          </main><!-- /.container -->
+      
+     
+         
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        
+
+
+
+
+
+  
+
+</body>
+</html>
