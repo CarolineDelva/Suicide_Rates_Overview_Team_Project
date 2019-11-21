@@ -122,12 +122,24 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 #### Year
 ![year](SuicideStudyApp/Images/year.PNG)
 
-#### Linear Regression 
+#### Multiple Linear Regression 
 
 ![linear regression](SuicideStudyApp/static/css/machinelearningmultiplelinearegression.PNG)
+
+#### Decision Tree Regression 
 ![decision tree](SuicideStudyApp/static/css/decisiontreemachinelearning.PNG)
+
+#### Support Vector Machine Regression 
 ![SVM](SuicideStudyApp/static/css/supportvectormachinelearning.PNG)
+
+#### Random Forest Regression 
 ![random forest](SuicideStudyApp/static/css/randomforestmachinelearning.PNG
 
 ## Conclusion 
+
+* A one-way ANOVA was conducted using SciPy.stats to understand whether the difference between suicide rates in all the continents is significant. As seen in the snipet below, the p-value of the t-test was 0.002, which is greater than 0.05. This means that this sample shows that there is a significant difference in average suicide rates based on age ranges between all the continents.
+* A one-way ANOVA was conducted using SciPy.stats to understand whether the difference in suicide rates in all the continents As seen in the snipet below, the p-value of the t-test was 0.66, which is greater than 0.05. This means that this sample shows that there is no significant difference in suicide rates between all the continents
+* A one-way ANOVA was conducted using SciPy.stats to understand whether the difference between suicide rates in all the continents is significant. As seen in the snipet below, the p-value of the t-test was 0.001, which is smaller than 0.05. This means that this sample shows that there is a significant difference in average suicide rates based on gemeration between all the continents.
+* There is no significant correlation between GDP per capita and suicide rates in all continents.
+* The regression was conducted for the United States and it was found that there is a strong positive correlation (r-value = 0.832) between suicide rates and year. This means that as time goes on suicide rates in United States increases. That increase overtime is statistically significant because the analysis has a p-value (6.25e-09) less than 0.05.
 
