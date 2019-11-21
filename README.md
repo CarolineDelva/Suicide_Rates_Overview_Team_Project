@@ -148,3 +148,7 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 * There is no significant correlation between GDP per capita and suicide rates in all continents.
 * The regression was conducted for the United States and it was found that there is a strong positive correlation (r-value = 0.832) between suicide rates and year. This means that as time goes on suicide rates in United States increases. That increase overtime is statistically significant because the analysis has a p-value (6.25e-09) less than 0.05.
 
+
+## Contact
+* [Visit my LinkedIn](https://www.linkedin.com/in/caroline-delva-5184a172/) 
+* [Visit my portfolio](https://carolinedelva.github.io/CarolineDelvaPortfolio/) 
