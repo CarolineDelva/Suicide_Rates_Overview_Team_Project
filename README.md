@@ -91,8 +91,11 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 ## Getting Started
 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Find HTML pages in the [main folder](https://github.com/CarolineDelva/WebVisualizationDashboard-Latitute-HTML-CSS-BootStrap-Project).
-3. Find CSS pages in the [main folder](https://github.com/CarolineDelva/WebVisualizationDashboard-Latitute-HTML-CSS-BootStrap-Project).
-4. Find the [cities.csv](https://github.com/CarolineDelva/WebVisualizationDashboard-Latitute-HTML-CSS-BootStrap-Project/blob/master/Resources/cities.csv) in the Resources folder.
-5. The final page is deployed to Github and a Github Page is created. 
+2. Find the [Create_Tables_db.sql](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/blob/master/SuicideStudyApp/db/Create_Tables_db.sql) to create tables SQL.
+3. Find HTML pages in the [templates](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/templates).
+4. Find CSS pages in the [css](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/static/css) folder.
+5. Find the JS pages in [js](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/static/js).
+6. Find the [application](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/blob/master/SuicideStudyApp/suicideapp.py) in the main folder.
+7. Find the [Machine Learning Notebooks](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/Machine%20Learning%20Notebooks) in the main folder.
+
 
