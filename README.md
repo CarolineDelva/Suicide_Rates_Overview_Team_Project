@@ -64,3 +64,35 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 * Support Vector Machine Regression 
 * Random Forest Regression 
 
+
+## Methods Used
+* Data Visualization
+* Data Exploration
+* Database 
+* Back-End Development 
+* Front-End Development
+* Server
+* ETL
+
+
+
+## Technologies
+* Python (Jupyter Notebook, BeautifulSoup, Pandas, Requests/Splinter).
+* HTML
+* MongoDB (pymongo)
+
+## Needed for this project 
+* Procfile
+* requirements.txt
+* run.sh
+* runtime.txt
+* _init_.py
+
+## Getting Started
+
+1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
+2. Find HTML pages in the [main folder](https://github.com/CarolineDelva/WebVisualizationDashboard-Latitute-HTML-CSS-BootStrap-Project).
+3. Find CSS pages in the [main folder](https://github.com/CarolineDelva/WebVisualizationDashboard-Latitute-HTML-CSS-BootStrap-Project).
+4. Find the [cities.csv](https://github.com/CarolineDelva/WebVisualizationDashboard-Latitute-HTML-CSS-BootStrap-Project/blob/master/Resources/cities.csv) in the Resources folder.
+5. The final page is deployed to Github and a Github Page is created. 
+
