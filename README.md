@@ -3,6 +3,7 @@
 
 I completed this project during my time at the [Columbia Engineering Data Analytics Bootcamp](https://bootcamp.cvn.columbia.edu/data/nyc/landing/?s=Google-Brand&pkw=%2Bdata%20%2Banalytics%20%2Bcolumbia&pcrid=392444639754&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=%5BS%5D_GRD_Data_Brand_ALL_NYC_BMM_New&utm_term=%2Bdata%20%2Banalytics%20%2Bcolumbia&utm_content=392444639754&s=google&k=%2Bdata%20%2Banalytics%20%2Bcolumbia&gclid=Cj0KCQiA2b7uBRDsARIsAEE9XpFH-2wU0-_7jtxCV_PCkGBR0prlyKtvpF2-nAWU1tO4oYci5h1QStsaAsg5EALw_wcB&gclsrc=aw.ds) located in New York, NY.
 
+![age](SuicideStudyApp/static/css/69815.jpg)
 
 #### -- Project Status: [Completed]
 
@@ -96,7 +97,7 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 2. Find the [Create_Tables_db.sql](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/blob/master/SuicideStudyApp/db/Create_Tables_db.sql) to create tables SQL.
 3. Find HTML pages in the [templates](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/templates).
 4. Find CSS pages in the [css](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/static/css) folder.
-5. Find the JS pages in [js](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/static/js).
+5. Find the JS pages in the [js](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/static/js) folder.
 6. Find the [application](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/blob/master/SuicideStudyApp/suicideapp.py) in the main folder.
 7. Find the [Machine Learning Notebooks](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/Machine%20Learning%20Notebooks) in the main folder.
 
