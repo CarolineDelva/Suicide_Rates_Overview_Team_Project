@@ -98,4 +98,29 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 6. Find the [application](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/blob/master/SuicideStudyApp/suicideapp.py) in the main folder.
 7. Find the [Machine Learning Notebooks](https://github.com/CarolineDelva/Suicide_Rates_Overview_Team_Project/tree/master/SuicideStudyApp/Machine%20Learning%20Notebooks) in the main folder.
 
+## Output 
+
+#### Age
+
+![age](SuicideStudyApp/Images/age.PNG)
+
+#### Gender
+
+![gender](SuicideStudyApp/Images/gender.PNG)
+
+#### Gross Domestic Product 
+
+![GDP](SuicideStudyApp/Images/GDP.PNG)
+
+#### Generation
+
+![Generation](SuicideStudyApp/Images/generation.PNG)
+
+#### Population
+![population](SuicideStudyApp/Images/population.PNG)
+
+#### Year
+![year](SuicideStudyApp/Images/year.PNG)
+
+## Conclusion 
 
