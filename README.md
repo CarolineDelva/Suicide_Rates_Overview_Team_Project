@@ -122,5 +122,12 @@ The data analysis was conducted using stats and stats.py from Python. The functi
 #### Year
 ![year](SuicideStudyApp/Images/year.PNG)
 
+#### Linear Regression 
+
+![linear regression](SuicideStudyApp/static/css/machinelearningmultiplelinearegression.PNG)
+![decision tree](SuicideStudyApp/static/css/decisiontreemachinelearning.PNG)
+![SVM](SuicideStudyApp/static/css/supportvectormachinelearning.PNG)
+![random forest](SuicideStudyApp/static/css/randomforestmachinelearning.PNG
+
 ## Conclusion 
 
