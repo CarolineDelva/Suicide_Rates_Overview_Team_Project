@@ -1,1 +1,1 @@
-web: gunicorn ML_Movies.imdbmoviesapp:app 
+web: gunicorn SuicideStudyApp/suicideapp.py 
