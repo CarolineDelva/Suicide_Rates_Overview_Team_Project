@@ -1,1 +1,1 @@
-web: gunicorn SuicideStudyApp/suicideapp.py 
+web: gunicorn SuicideStudyApp/suicideapp.py:application
