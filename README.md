@@ -1,11 +1,11 @@
-?# Suicide Study Application
+# Suicide Study Application
 
 
 I completed this project during my time at the [Columbia Engineering Data Analytics Bootcamp](https://bootcamp.cvn.columbia.edu/data/nyc/landing/?s=Google-Brand&pkw=%2Bdata%20%2Banalytics%20%2Bcolumbia&pcrid=392444639754&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=%5BS%5D_GRD_Data_Brand_ALL_NYC_BMM_New&utm_term=%2Bdata%20%2Banalytics%20%2Bcolumbia&utm_content=392444639754&s=google&k=%2Bdata%20%2Banalytics%20%2Bcolumbia&gclid=Cj0KCQiA2b7uBRDsARIsAEE9XpFH-2wU0-_7jtxCV_PCkGBR0prlyKtvpF2-nAWU1tO4oYci5h1QStsaAsg5EALw_wcB&gclsrc=aw.ds) located in New York, NY.
 
 
 
-#### -- Project Status: [Completed]
+#### -- Project Status: [In progress]
 
 ![age](SuicideStudyApp/static/css/69815.jpg)
 
@@ -21,9 +21,9 @@ The final project include the following:
 
 ### Dataset
 
-This dataset ìSuicide Rates Overview From 1985 to 2016î was collected from Kaggle. It comprises of suicide rates for 101 countries in all 6 continents around the world from 1985 to 2016. The dataset also provides these variables: year, gross domestic project (GDP), GDP per capita, Human Development Index (HDI) for year, suicide rates per 100k population, generation, age, sex, and population.
+This dataset ‚ÄúSuicide Rates Overview From 1985 to 2016‚Äù was collected from Kaggle. It comprises of suicide rates for 101 countries in all 6 continents around the world from 1985 to 2016. The dataset also provides these variables: year, gross domestic project (GDP), GDP per capita, Human Development Index (HDI) for year, suicide rates per 100k population, generation, age, sex, and population.
 
-As the main dataset does not list the continents, Techslides' application programming interface (API) was used to provide the countriesí continent and flag photos. Antarctica is not included in this study because it is currently uninhabited.
+As the main dataset does not list the continents, Techslides' application programming interface (API) was used to provide the countries‚Äô continent and flag photos. Antarctica is not included in this study because it is currently uninhabited.
 
 ### Variables
 
@@ -32,9 +32,9 @@ As the main dataset does not list the continents, Techslides' application progra
 - Sex: Male - Female.
 - Age: 5-14 years, 15-24 years, 25-34 years, 35-54 years, 55-74 years, 75+ years.
 - GDP per Capita: The measurement for a country's standard of living for each individual based on its economy and its population.
-- GDP per Year The measurement of a countryís economic production every year.
+- GDP per Year The measurement of a country‚Äôs economic production every year.
 - Generation Z, Millenials, G.I., X, Silent, Boomers.
-- Human Development Index (HDI): The overall measurement of a countryís standard of living that accounts for litteracy, gdp and life expectency.
+- Human Development Index (HDI): The overall measurement of a country‚Äôs standard of living that accounts for litteracy, gdp and life expectency.
 - Population: The number of people who reside in a country every year.
 - Continents: Africa, Asia, Australia, Europe, North American and South America. Antarctica was not included in this study.
 
